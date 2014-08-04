@@ -39,18 +39,26 @@ module.exports = function(grunt) {
                 tasks: ['newer:copy:styles', 'autoprefixer']
             },
 
+            compass:{
+                files:'<%= yeoman.app %>/sass/**/*.scss',
+                tasks:'compass:dist'
+            },
+
             gruntfile: {
                 files: ['Gruntfile.js']
             },
 
             livereload: {
                 options: {
-                    livereload: '<%= connect.options.livereload %>'
+                    livereload: '<%= connect.options.livereload %>',
+                    spawn:false
                 },
                 files: [
                     '<%= yeoman.app %>/*.html',
                     '.tmp/styles/{,*/}*.css',
-                    '<%= yeoman.app %>/img/**/*.{png,jpg,jpeg,gif,webp,svg}'
+                    '<%= yeoman.app %>/img/**/*.{png,jpg,jpeg,gif,webp,svg}',
+                    '<%= yeoman.app %>/js/**/*.js',
+                    '<%= yeoman.app %>/css/**/*.css'
                 ]
             }
         },
@@ -342,7 +350,17 @@ module.exports = function(grunt) {
                 configFile: 'karma.conf.js',
                 singleRun: true
             }
+        },
+
+        compass:{
+            dist: {
+                options: {
+                sassDir: '<%= yeoman.app %>/sass',
+                cssDir: '<%= yeoman.app %>/css'
+                }
+            }
         }
+
     });
 
 
