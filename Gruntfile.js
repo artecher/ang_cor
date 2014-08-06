@@ -170,13 +170,14 @@ module.exports = function(grunt) {
                         'app/modules/*/directives/*.js',
                         'app/modules/*/filters/*.js',
                         'app/modules/*/controllers/*.js',
-                        'app/css/**/*.css'
+                        'app/css/**/*.css',
+                        'app/js/**/*.js'
                     ]
                 }
             }
         },
 
-        // Automatically inject Bower components into the app
+        // Automatically inject Bower components into the html
         bowerInstall: {
             app: {
                 src: ['<%= yeoman.app %>/index.html'],
@@ -312,7 +313,9 @@ module.exports = function(grunt) {
                         'index.html',
                         'modules/*/views/*.html',
                         'img/{,*/}*.{webp}',
-                        'fonts/*'
+                        'fonts/*',
+                        'modules/**/*.js',
+                        'data/**/*.json'
                     ]
                 }, {
                     expand: true,
