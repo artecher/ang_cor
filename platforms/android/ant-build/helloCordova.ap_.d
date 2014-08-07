@@ -59,6 +59,7 @@ C:\projects\ang_cor\platforms\android\assets\www\modules\core\tests\e2e\home\hom
 C:\projects\ang_cor\platforms\android\assets\www\modules\core\tests\unit\home.spec.js \
 C:\projects\ang_cor\platforms\android\assets\www\modules\core\views\home.html \
 C:\projects\ang_cor\platforms\android\assets\www\modules\core\views\mainPageView.html \
+C:\projects\ang_cor\platforms\android\assets\www\modules\core\views\resultView.html \
 C:\projects\ang_cor\platforms\android\assets\www\modules\core\views\wizardView.html \
 C:\projects\ang_cor\platforms\android\assets\www\plugins\org.apache.cordova.splashscreen \
 C:\projects\ang_cor\platforms\android\assets\www\plugins\org.apache.cordova.splashscreen\www \
