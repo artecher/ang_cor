@@ -40,7 +40,16 @@ C:\projects\ang_cor\platforms\android\assets\www\scripts \
 C:\projects\ang_cor\platforms\android\assets\www\styles \
 C:\projects\ang_cor\platforms\android\assets\www\data\carModels.json \
 C:\projects\ang_cor\platforms\android\assets\www\data\currentModel.json \
+C:\projects\ang_cor\platforms\android\assets\www\img\gasStationLogos \
 C:\projects\ang_cor\platforms\android\assets\www\img\loaders \
+C:\projects\ang_cor\platforms\android\assets\www\img\gasStationLogos\BP.png \
+C:\projects\ang_cor\platforms\android\assets\www\img\gasStationLogos\Caltex.png \
+C:\projects\ang_cor\platforms\android\assets\www\img\gasStationLogos\default.png \
+C:\projects\ang_cor\platforms\android\assets\www\img\gasStationLogos\Gulf.png \
+C:\projects\ang_cor\platforms\android\assets\www\img\gasStationLogos\Mobil.jpg \
+C:\projects\ang_cor\platforms\android\assets\www\img\gasStationLogos\paknsave.jpg \
+C:\projects\ang_cor\platforms\android\assets\www\img\gasStationLogos\Shell.png \
+C:\projects\ang_cor\platforms\android\assets\www\img\gasStationLogos\Z.png \
 C:\projects\ang_cor\platforms\android\assets\www\img\loaders\loader.gif \
 C:\projects\ang_cor\platforms\android\assets\www\modules\core \
 C:\projects\ang_cor\platforms\android\assets\www\modules\core\config \
