@@ -90,7 +90,7 @@ angular.module('iFuelApp',['ngRoute','wizardApp'])
         //This function calls the distanceMatrix service using the locations returned by placesSearch service
         function processLoc(results,status) {
             if(status != google.maps.places.PlacesServiceStatus.OK) {
-                console.log(status);
+                alert(status);
             }
             else{
                 //calculate the distance
@@ -121,7 +121,7 @@ angular.module('iFuelApp',['ngRoute','wizardApp'])
         //callback function for returned distance matrix
         function processDistance(response,status) {
             if(status != google.maps.places.PlacesServiceStatus.OK) {
-                console.log(status);
+                alert(status);
             }
             else{
                 var destinations = response.destinationAddresses;
@@ -143,7 +143,9 @@ angular.module('iFuelApp',['ngRoute','wizardApp'])
                 //set offsetAve attribute
                 for(var i in  $scope.bodyResultArray) {
                     $scope.bodyResultArray[i].offsetAve = $scope.bodyResultArray[i].totalCost-averageCost;
-                    console.log("offset cost: "+$scope.bodyResultArray[i].offsetAve);
+                    if(DEBUG){
+                        console.log("offset cost: "+$scope.bodyResultArray[i].offsetAve);
+                    }
                 }
 
                 //redirect to the result page after callback function done its work.
@@ -245,7 +247,7 @@ angular.module('wizardApp', [])
                     $scope.carModels = data;
             })
             .error(function(error) {
-                console.log("Error getting storage data: "+error);
+                alert("Error getting storage data: "+error);
             });
 
         $scope.$watch('selectedModel',function() {
