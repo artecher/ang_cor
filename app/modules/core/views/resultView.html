@@ -1,0 +1,17 @@
+<div id="result-view"  ng-controller="ResultCtrl" ng-repeat="item in bodyResultArray | orderBy:'totalCost'">
+    <section class="well station-result-entry">
+        <img ng-src="{{selectLogo(item.name)}}" alt=""/>
+        <div class="nameAddr">
+            <p class="name font-20">{{item.name}} </p>
+            <p class="font-16">{{item.distanceStr}}</p>
+            <address>{{item.address}}</address>
+        </div>
+        <div class="price">
+            <p class="total-price" >Total Cost: <span class="font-20 label total-cost" ng-class="aveClass(item.offsetAve)">{{item.totalCost | currency}}</span></p>
+            <p class="price-offset"><span class="offset label font-16" ng-class="aveClass(item.offsetAve)">{{abs(item.offsetAve) | currency}} {{offsetAveCompare(item.offsetAve) | uppercase}}</span> than average cost</p>
+        </div>
+        <div class="navigate-sec">
+            <a href="#" class="btn btn-primary navigate">Navigate</a>
+        </div>
+    </section>
+</div>

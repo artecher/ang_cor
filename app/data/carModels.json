@@ -1,0 +1,32 @@
+[
+    {
+        "id":0,
+        "model":"Sedan",
+        "fuelConsumption":10,
+        "tankVolumn":40
+    },
+    {
+        "id":1,
+        "model":"Wagon",
+        "fuelConsumption":12,
+        "tankVolumn":50
+    },
+    {
+        "id":2,
+        "model":"SUV",
+        "fuelConsumption":12,
+        "tankVolumn":60
+    },
+    {
+        "id":3,
+        "model":"Truck",
+        "fuelConsumption":14,
+        "tankVolumn":60
+    },
+    {
+        "id":4,
+        "model":"Van",
+        "fuelConsumption":16,
+        "tankVolumn":60
+    }
+]

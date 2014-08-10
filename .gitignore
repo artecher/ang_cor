@@ -6,7 +6,7 @@ dist/
 .sass-cache
 app/bower_components
 .idea/
-app/
+app/lib
 
 www/
 ##########Platforms##########

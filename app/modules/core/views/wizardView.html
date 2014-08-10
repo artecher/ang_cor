@@ -1,0 +1,12 @@
+<div id="wizard-view">
+    <form ng-app="wizardApp" id="wizard" action="#/mainPage" name="wizardForm" novalidate>
+        <fieldset ng-controller="wizardCtrl">
+            <select class="form-control" name="model" required ng-model="selectedModel" ng-options="item.id as item.model for item in carModels" >
+                <option value="" disabled selected style="display: none">Please select model of your car</option><!-- simulate a placeholder -->
+            </select>
+            <input class="form-control" name="consumption" placeholder="value will be filled if you choose the model" type="number" ng-model="consumption" required/>
+            <input class="form-control" name="tankVol"  placeholder="value will be filled if you choose the model"  type="number" ng-model="tankVol" required/>
+            <input type="submit" class="btn btn-primary" ng-disabled="wizardForm.$invalid" value="Next" ng-click="next()"/>
+        </fieldset>
+    </form>
+</div>

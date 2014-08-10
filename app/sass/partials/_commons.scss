@@ -1,0 +1,16 @@
+.pageContantArea {
+  position: relative;
+  top:($menu-bar-height-num)*1px;
+}
+
+.font-30{
+  font-size:(30/$bootstrap-base-font-size-num)*1em;
+}
+
+.font-20{
+  font-size:(20/$bootstrap-base-font-size-num)*1em;
+}
+
+.font-16{
+  font-size:(16/$bootstrap-base-font-size-num)*1em;
+}

@@ -1,0 +1,118 @@
+<!doctype html>
+  <html ng-app="iFuelApp">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+        <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/custom.css -->
+        <!-- injector:css -->
+        <link rel="stylesheet" href="css/customcordova.css" />
+        <link rel="stylesheet" href="css/demo.css" />
+        <link rel="stylesheet" href="css/partials/commons.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <!-- endinjector -->
+    <!-- endbuild -->
+  </head>
+
+  <body ng-controller="DefaultCtrl">
+
+    <!-- =================== Navigation bar =================== -->
+    <header ng-cloak class="navbar navbar-default navbar-fixed-top">
+        <span class="navbar-brand visible-xs">
+            {{bodyObject.title}}
+        </span>
+    </header>
+
+    <div class="content-container pageContantArea">
+        <div ng-view></div>
+        <footer></footer>
+    </div>
+
+    <!-- /.main -->
+
+
+    <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="lib/jquery/dist/jquery.js"></script>
+        <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="lib/angular/angular.js"></script>
+        <script src="lib/angular-resource/angular-resource.js"></script>
+        <script src="lib/angular-mocks/angular-mocks.js"></script>
+        <script src="lib/angular-cookies/angular-cookies.js"></script>
+        <script src="lib/angular-animate/angular-animate.js"></script>
+        <script src="lib/angular-touch/angular-touch.js"></script>
+        <script src="lib/angular-sanitize/angular-sanitize.js"></script>
+        <script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <script src="lib/angular-ui-utils/ui-utils.js"></script>
+        <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="lib/angular-route/angular-route.js"></script>
+        <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/custom.js -->
+        <!-- injector:js -->
+        <script src="js/config.js"></script>
+        <script src="js/application.js"></script>
+        <script src="modules/core/core.js"></script>
+        <script src="modules/core/config/routes.js"></script>
+        <script src="modules/core/controllers/home.js"></script>
+        <script src="modules/core/controllers/wizardCtrl.js"></script>
+        <!-- endinjector -->
+    <!-- endbuild -->
+
+    <!-- iOil -->
+    <!--<script src="lib/cordova.js"></script>-->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>
+    <script>
+
+        // Wait for Cordova to load
+        //
+
+        // onSuccess Callback
+        //   This method accepts a `Position` object, which contains
+        //   the current GPS coordinates
+        //
+//        function onSuccess(position) {
+//            var element = document.getElementById('geolocation');
+//            element.innerHTML = 'Latitude: '  + position.coords.latitude      + '<br />' +
+//                    'Longitude: ' + position.coords.longitude     + '<br />' +
+//                    '<hr />'      + element.innerHTML;
+//        }
+//
+//        // onError Callback receives a PositionError object
+//        //
+//        function onError(error) {
+//            alert('code: '    + error.code    + '\n' +
+//                    'message: ' + error.message + '\n');
+//        }
+//
+//
+//        // onSuccess Callback
+//        // This method accepts a Position object, which contains the
+//        // current GPS coordinates
+//        //
+        var onSuccess1 = function(position) {
+            initialize(position.coords.latitude, position.coords.longitude);
+        };
+//
+//        // onError Callback receives a PositionError object
+//        //
+        function onError1(error) {
+            alert('code: '    + error.code    + '\n' +
+                    'message: ' + error.message + '\n');
+        }
+
+//        navigator.geolocation.getCurrentPosition(onSuccess1, onError1);
+//        var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { timeout: 10000 });
+    </script>
+
+  </body>
+</html>

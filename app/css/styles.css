@@ -1,0 +1,143 @@
+/* =========== color ===================*/
+/* =========== font-size ===================*/
+/* line 1, ../sass/partials/_commons.scss */
+.pageContantArea {
+  position: relative;
+  top: 50px;
+}
+
+/* line 6, ../sass/partials/_commons.scss */
+.font-30 {
+  font-size: 2.14286em;
+}
+
+/* line 10, ../sass/partials/_commons.scss */
+.font-20 {
+  font-size: 1.42857em;
+}
+
+/* line 14, ../sass/partials/_commons.scss */
+.font-16 {
+  font-size: 1.14286em;
+}
+
+/* line 1, ../sass/views/_search-view.scss */
+div#search-page {
+  height: 100%;
+}
+/* line 3, ../sass/views/_search-view.scss */
+div#search-page div#welcome-map {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+/* line 8, ../sass/views/_search-view.scss */
+div#search-page form#searchForm {
+  position: absolute;
+  top: 55px;
+  left: 10px;
+  z-index: 2;
+}
+/* line 13, ../sass/views/_search-view.scss */
+div#search-page form#searchForm input.form-control {
+  width: 80%;
+}
+
+/* line 2, ../sass/views/_search-result-view.scss */
+div#result-view section.station-result-entry {
+  color: #606362;
+  float: left;
+  width: 100%;
+}
+/* line 6, ../sass/views/_search-result-view.scss */
+div#result-view section.station-result-entry > * {
+  float: left;
+}
+/* line 9, ../sass/views/_search-result-view.scss */
+div#result-view section.station-result-entry img {
+  width: 10%;
+  margin-top: 10px;
+}
+/* line 13, ../sass/views/_search-result-view.scss */
+div#result-view section.station-result-entry div.nameAddr {
+  padding: 0 15px;
+  width: 50%;
+}
+/* line 16, ../sass/views/_search-result-view.scss */
+div#result-view section.station-result-entry div.nameAddr p.name {
+  font-weight: bold;
+}
+/* line 19, ../sass/views/_search-result-view.scss */
+div#result-view section.station-result-entry div.nameAddr address {
+  font-style: italic;
+}
+/* line 23, ../sass/views/_search-result-view.scss */
+div#result-view section.station-result-entry div.price {
+  width: 40%;
+}
+/* line 26, ../sass/views/_search-result-view.scss */
+div#result-view section.station-result-entry div.price p.total-price span.total-cost {
+  line-height: 2;
+}
+/* line 31, ../sass/views/_search-result-view.scss */
+div#result-view section.station-result-entry div.price p.price-offset span.offset {
+  line-height: 2;
+}
+/* line 36, ../sass/views/_search-result-view.scss */
+div#result-view section.station-result-entry div.navigate-sec {
+  width: 100%;
+  border-top: solid 1px #606362;
+}
+/* line 40, ../sass/views/_search-result-view.scss */
+div#result-view section.station-result-entry div.navigate-sec a.navigate {
+  float: right;
+  margin: 10px auto;
+}
+
+/* line 7, ../sass/styles.scss */
+body, html {
+  height: 100% !important;
+}
+
+/* line 11, ../sass/styles.scss */
+div.container {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 16, ../sass/styles.scss */
+div.content-container {
+  height: calc(100% - 50px);
+}
+
+/* line 20, ../sass/styles.scss */
+div[ng-view] {
+  height: 100%;
+}
+
+/* line 25, ../sass/styles.scss */
+header.navbar {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 33, ../sass/styles.scss */
+span.navbar-brand {
+  float: none !important;
+  text-align: center;
+}
+
+/* ========================== form wizard ======================*/
+/* line 41, ../sass/styles.scss */
+form#wizard {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 155px;
+  left: 10px;
+  z-index: 2;
+}
+/* line 48, ../sass/styles.scss */
+form#wizard .form-control {
+  width: 80%;
+}
