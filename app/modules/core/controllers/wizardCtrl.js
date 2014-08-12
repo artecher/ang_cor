@@ -34,7 +34,7 @@ angular.module('iFuelApp')
                 storage.setItem('iFuelPrefCons', $scope.consumption);
                 storage.setItem('iFuelPrefTankVol', $scope.tankVol);
             }else{
-                alert("Preference is not saved, but we can go on...")
+                alert("Preference is not saved because current browser is old, but we can go on...")
             }
         };
     });

@@ -2,8 +2,8 @@
  * Created by ethan on 2014/8/12.
  */
 angular.module('iFuelApp')
-    .controller('MainPageCtrl',function($scope) {
-        console.debug("MainPageCtrl");
+    .controller('SearchCtrl',function($scope) {
+        console.debug("SearchCtrl");
 
         //set the title value
         $scope.bodyObject.title="iFuel - Search";
@@ -17,10 +17,16 @@ angular.module('iFuelApp')
         curLat=-36.897125;
         curLng=174.888187;
         curPos=new google.maps.LatLng(curLat, curLng);
-        initialize(curPos);
 
-        //get the current position with cordova
+        $scope.$on('$routeChangeSuccess',function() {
+            console.debug("route changed to SearchCtrl");
+            //move initialize function into a dedicated function. then unit testing for other functions will not invoke this function
+            initialize(curPos);
+            //get the current position with cordova
 //        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+        });
+
+
 
 
         function onSuccess(position) {
@@ -137,7 +143,7 @@ angular.module('iFuelApp')
                     resultEntry.address = destinations[idx];
                     resultEntry.distanceStr = resultRow[idx].distance.text;
                     resultEntry.distanceVal = resultRow[idx].distance.value;
-                    resultEntry.totalCost = calculatePrice(resultEntry);
+                    resultEntry.totalCost = $scope.calculatePrice(resultEntry);
                     tempTotalCost+=resultEntry.totalCost;
                     console.log('distance to '+destinations[idx] +' is '+resultRow[idx].distance.value);
                 }
@@ -155,7 +161,15 @@ angular.module('iFuelApp')
             }
         }
 
-        function calculatePrice(resultEntry) {
+        $scope.calculatePrice= function(resultEntry) {
+
+            console.log($scope.bodyObject.consumption);
+            console.log(resultEntry.distanceVal);
+            console.log($scope.bodyObject.fuelPrice);
+            console.log($scope.bodyObject.fillVol);
+
+
+
             var travelCost = $scope.bodyObject.consumption/100*resultEntry.distanceVal/1000*$scope.bodyObject.fuelPrice;
             var fuelCost = $scope.bodyObject.fuelPrice * $scope.bodyObject.fillVol;
             console.log('travelCost '+travelCost);

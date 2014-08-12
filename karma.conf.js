@@ -23,6 +23,8 @@ module.exports = function(config) {
             'app/lib/angular-bootstrap/ui-bootstrap.js',
             'app/lib/angular-ui-utils/ui-utils.js',
             'app/lib/angular-ui-router/release/angular-ui-router.js',
+            'app/lib/angular-route/angular-route.js',
+            'https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places',
 
             'app/js/config.js',
             'app/js/application.js',
