@@ -16,13 +16,12 @@
         <!-- injector:css -->
         <link rel="stylesheet" href="css/customcordova.css" />
         <link rel="stylesheet" href="css/demo.css" />
-        <link rel="stylesheet" href="css/partials/commons.css" />
         <link rel="stylesheet" href="css/styles.css" />
         <!-- endinjector -->
     <!-- endbuild -->
   </head>
 
-  <body ng-controller="DefaultCtrl">
+  <body ng-controller="BodyCtrl">
 
     <!-- =================== Navigation bar =================== -->
     <header ng-cloak class="navbar navbar-default navbar-fixed-top">
@@ -63,7 +62,10 @@
         <script src="js/application.js"></script>
         <script src="modules/core/core.js"></script>
         <script src="modules/core/config/routes.js"></script>
+        <script src="modules/core/controllers/defaultCtrl.js"></script>
         <script src="modules/core/controllers/home.js"></script>
+        <script src="modules/core/controllers/searchCtrl.js"></script>
+        <script src="modules/core/controllers/searchResultCtrl.js"></script>
         <script src="modules/core/controllers/wizardCtrl.js"></script>
         <!-- endinjector -->
     <!-- endbuild -->

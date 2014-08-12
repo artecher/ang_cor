@@ -1,2 +1,2 @@
 License:
-All right reserved.
+All rights reserved.
