@@ -362,6 +362,15 @@ module.exports = function(grunt) {
                 cssDir: '<%= yeoman.app %>/css'
                 }
             }
+        },
+
+        protractor: {
+            dist: {
+                options: {
+                    keepAlive: true,
+                    configFile: "protractor-config.js"
+                }
+            }
         }
 
     });
@@ -394,7 +403,8 @@ module.exports = function(grunt) {
         'concurrent:test',
         'autoprefixer',
         'connect:test',
-        'karma'
+        'karma',
+        'protractor:dist'
     ]);
 
     grunt.registerTask('build', [
