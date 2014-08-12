@@ -21,39 +21,61 @@ angular.module('iFuelApp',['ngRoute','wizardApp'])
             });
     })
     .controller('MainPageCtrl',function($scope) {
+        console.debug("MainPageCtrl");
 
         //set the title value
         $scope.bodyObject.title="iFuel - Search";
+        //reset the bodyResultArray value when comes to the search page
+        $scope.bodyObject.bodyResultArray=[];
 
         var curLat, curLng, curPos;
         var map;
 
-        //get the current position with cordova
-        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+        //test code
+        curLat=-36.897125;
+        curLng=174.888187;
+        curPos=new google.maps.LatLng(curLat, curLng);
+        initialize(curPos);
 
-        //callback for getCurrentPosition
-        var onSuccess = function(position) {
+        //get the current position with cordova
+//        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+
+
+       function onSuccess(position) {
             curLat = position.coords.latitude;
             curLng = position.coords.longitude;
+//            curLat = -36.897125;
+//            curLng = 174.888187;
             curPos = new google.maps.LatLng(curLat, curLng);
             //initialize the map
-            initialize(curLat,curLng);//initialize the map after all elements loaded, otherwise, errors could happen
+            initialize(curPos);//initialize the map after all elements loaded, otherwise, errors could happen
         };
+
+        //callback for getCurrentPosition
+
          // onError Callback receives a PositionError object
         function onError(error) {
             alert('code: '    + error.code    + '\n' +
                 'message: ' + error.message + '\n');
         }
 
-        //callback function for google map initialization
-        function initialize(lat, lng) {
+
+
+        //for google map initialization
+        function initialize(curPos) {
             var mapOptions = {
-                zoom: 12,
-                center: new google.maps.LatLng(lat, lng),
+                zoom: 16,
+                center: curPos,
                 disableDefaultUI:true
             };
             map = new google.maps.Map(document.getElementById('welcome-map'),
                 mapOptions);
+            //add marker of current position
+            var marker = new google.maps.Marker({
+                position: curPos,
+                map: map,
+                title: 'Your current position'
+            });
         }
 
         //initialize the value of input from preference
@@ -100,7 +122,7 @@ angular.module('iFuelApp',['ngRoute','wizardApp'])
                     var resultEntry = new Object();
                     resultEntry.name = results[idx].name;
                     resultEntry.icon = results[idx].icon;
-                    $scope.bodyResultArray.push(resultEntry);
+                    $scope.bodyObject.bodyResultArray.push(resultEntry);
                     destinationArray.push(results[idx].geometry.location);
                 }
                 var disService = new google.maps.DistanceMatrixService();
@@ -129,7 +151,7 @@ angular.module('iFuelApp',['ngRoute','wizardApp'])
                 var tempTotalCost = 0;//for calculation of average cost
                 for(var idx in resultRow) {
                     //insert attributes to results for the search result page usage
-                    var resultEntry = $scope.bodyResultArray[idx];
+                    var resultEntry = $scope.bodyObject.bodyResultArray[idx];
                     resultEntry.address = destinations[idx];
                     resultEntry.distanceStr = resultRow[idx].distance.text;
                     resultEntry.distanceVal = resultRow[idx].distance.value;
@@ -138,14 +160,12 @@ angular.module('iFuelApp',['ngRoute','wizardApp'])
                     console.log('distance to '+destinations[idx] +' is '+resultRow[idx].distance.value);
                 }
 
-                var averageCost = tempTotalCost/$scope.bodyResultArray.length;
+                var averageCost = tempTotalCost/ $scope.bodyObject.bodyResultArray.length;
 
                 //set offsetAve attribute
-                for(var i in  $scope.bodyResultArray) {
-                    $scope.bodyResultArray[i].offsetAve = $scope.bodyResultArray[i].totalCost-averageCost;
-                    if(DEBUG){
-                        console.log("offset cost: "+$scope.bodyResultArray[i].offsetAve);
-                    }
+                for(var i in  $scope.bodyObject.bodyResultArray) {
+                    $scope.bodyObject.bodyResultArray[i].offsetAve = $scope.bodyObject.bodyResultArray[i].totalCost-averageCost;
+                    console.log("offset cost: "+ $scope.bodyObject.bodyResultArray[i].offsetAve);
                 }
 
                 //redirect to the result page after callback function done its work.
@@ -163,6 +183,7 @@ angular.module('iFuelApp',['ngRoute','wizardApp'])
 
     })
     .controller('ResultCtrl',function($scope) {
+        console.debug("ResultCtrl");
         $scope.offsetAveCompare = function(offsetAve)
         {
             if(offsetAve>=0) {
@@ -228,7 +249,7 @@ angular.module('iFuelApp',['ngRoute','wizardApp'])
         //define page-level variables
         $scope.bodyObject = {};
         $scope.bodyObject.fuelPrice = 2.12;
-        $scope.bodyResultArray = [];
+        $scope.bodyObject.bodyResultArray = [];
 
     })
 ;
@@ -236,7 +257,7 @@ angular.module('iFuelApp',['ngRoute','wizardApp'])
 
 angular.module('wizardApp', [])
     .controller('wizardCtrl', function ($http, $scope) {
-
+        console.debug('wizardCtrl');
         //set the title value
         $scope.bodyObject.title="iFule - Configuration";
 

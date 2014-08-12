@@ -1,5 +1,5 @@
-<div id="result-view"  ng-controller="ResultCtrl" ng-repeat="item in bodyResultArray | orderBy:'totalCost'">
-    <section class="well station-result-entry">
+<div id="result-view"  ng-controller="ResultCtrl" >
+    <section class="well station-result-entry" ng-repeat="item in bodyObject.bodyResultArray | orderBy:'totalCost'">
         <img ng-src="{{selectLogo(item.name)}}" alt=""/>
         <div class="nameAddr">
             <p class="name font-20">{{item.name}} </p>
