@@ -68,8 +68,10 @@ C:\projects\ang_cor\platforms\android\assets\www\modules\core\tests\unit \
 C:\projects\ang_cor\platforms\android\assets\www\modules\core\tests\e2e\home \
 C:\projects\ang_cor\platforms\android\assets\www\modules\core\tests\e2e\home\home.po.js \
 C:\projects\ang_cor\platforms\android\assets\www\modules\core\tests\e2e\home\home.spec.js \
-C:\projects\ang_cor\platforms\android\assets\www\modules\core\tests\unit\controllers.js \
+C:\projects\ang_cor\platforms\android\assets\www\modules\core\tests\unit\controllers \
 C:\projects\ang_cor\platforms\android\assets\www\modules\core\tests\unit\home.spec.js \
+C:\projects\ang_cor\platforms\android\assets\www\modules\core\tests\unit\controllers\searchCtrlTest.js \
+C:\projects\ang_cor\platforms\android\assets\www\modules\core\tests\unit\controllers\wizardCtrlTest.js \
 C:\projects\ang_cor\platforms\android\assets\www\modules\core\views\home.html \
 C:\projects\ang_cor\platforms\android\assets\www\modules\core\views\mainPageView.html \
 C:\projects\ang_cor\platforms\android\assets\www\modules\core\views\resultView.html \

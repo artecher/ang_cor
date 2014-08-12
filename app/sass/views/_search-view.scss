@@ -7,11 +7,20 @@ div#search-page {
   }
   form#searchForm {
     position: absolute;
-    top: 55px;
-    left: 10px;
+    top: 35px;
+    right: 10px;
+    width:45%;
     z-index: 2;
-    input.form-control {
-      width: 80%;
+    input#search-fillVol{
+      width:100%;
+    }
+    input#search-btn{
+      margin-top: 5px;
+      float: right;
     }
   }
+}
+
+label{
+  color:$dark-gray;
 }

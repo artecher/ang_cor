@@ -21,6 +21,30 @@
   font-size: 1.14286em;
 }
 
+/* line 1, ../sass/views/_wizard-view.scss */
+div#wizard-view {
+  width: 60%;
+  height: 100%;
+  float: none;
+  margin: auto;
+}
+/* line 6, ../sass/views/_wizard-view.scss */
+div#wizard-view form#wizard {
+  width: 100%;
+  height: 100%;
+  margin-top: 10%;
+  z-index: 2;
+}
+/* line 12, ../sass/views/_wizard-view.scss */
+div#wizard-view form#wizard label {
+  margin-top: 5px;
+}
+/* line 16, ../sass/views/_wizard-view.scss */
+div#wizard-view form#wizard input#wiz-next {
+  margin-top: 10px;
+  float: right;
+}
+
 /* line 1, ../sass/views/_search-view.scss */
 div#search-page {
   height: 100%;
@@ -34,13 +58,24 @@ div#search-page div#welcome-map {
 /* line 8, ../sass/views/_search-view.scss */
 div#search-page form#searchForm {
   position: absolute;
-  top: 55px;
-  left: 10px;
+  top: 35px;
+  right: 10px;
+  width: 45%;
   z-index: 2;
 }
-/* line 13, ../sass/views/_search-view.scss */
-div#search-page form#searchForm input.form-control {
-  width: 80%;
+/* line 14, ../sass/views/_search-view.scss */
+div#search-page form#searchForm input#search-fillVol {
+  width: 100%;
+}
+/* line 17, ../sass/views/_search-view.scss */
+div#search-page form#searchForm input#search-btn {
+  margin-top: 5px;
+  float: right;
+}
+
+/* line 24, ../sass/views/_search-view.scss */
+label {
+  color: #606362;
 }
 
 /* line 2, ../sass/views/_search-result-view.scss */
@@ -94,50 +129,35 @@ div#result-view section.station-result-entry div.navigate-sec a.navigate {
   margin: 10px auto;
 }
 
-/* line 7, ../sass/styles.scss */
+/* line 8, ../sass/styles.scss */
 body, html {
   height: 100% !important;
 }
 
-/* line 11, ../sass/styles.scss */
+/* line 12, ../sass/styles.scss */
 div.container {
   width: 100%;
   height: 100%;
 }
 
-/* line 16, ../sass/styles.scss */
+/* line 17, ../sass/styles.scss */
 div.content-container {
   height: calc(100% - 50px);
 }
 
-/* line 20, ../sass/styles.scss */
+/* line 21, ../sass/styles.scss */
 div[ng-view] {
   height: 100%;
 }
 
-/* line 25, ../sass/styles.scss */
+/* line 26, ../sass/styles.scss */
 header.navbar {
   margin: 0;
   padding: 0;
 }
 
-/* line 33, ../sass/styles.scss */
+/* line 34, ../sass/styles.scss */
 span.navbar-brand {
   float: none !important;
   text-align: center;
-}
-
-/* ========================== form wizard ======================*/
-/* line 41, ../sass/styles.scss */
-form#wizard {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 155px;
-  left: 10px;
-  z-index: 2;
-}
-/* line 48, ../sass/styles.scss */
-form#wizard .form-control {
-  width: 80%;
 }

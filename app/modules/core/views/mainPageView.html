@@ -2,9 +2,11 @@
     <div id="welcome-map" ></div>
     <form id="searchForm" name="searchForm" action="" ng-controller="SearchCtrl" novalidate>
         <fieldset>
-            <input class="form-control" type="number" ng-model="bodyObject.consumption" name="consumption11" placeholder="Fuel consumption (L) per 100km"/>
-            <input class="form-control" type="number" ng-model="bodyObject.fillVol" name="volumn1" placeholder="How much L you want to fill"/>
-            <input class="btn btn-primary" type="submit" ng-disabled="searchForm.$invalid" value="Search" ng-click="search()"/>
+            <!--<label for="search-consumption">Fuel consumption (per 100km)</label>-->
+            <!--<input id="search-consumption" class="form-control" type="number" ng-model="bodyObject.consumption" name="consumption11" placeholder="Fuel consumption (L) per 100km"/>-->
+            <label for="search-fillVol">How many Litres to fill:</label>
+            <input id="search-fillVol" class="form-control" type="number" ng-model="bodyObject.fillVol" name="volumn1" placeholder="How much L you want to fill"/>
+            <input id="search-btn" class="btn btn-primary" type="submit" ng-disabled="searchForm.$invalid" value="Search stations" ng-click="search()"/>
         </fieldset>
     </form>
 </div>

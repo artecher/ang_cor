@@ -1,5 +1,6 @@
 @import "partials/constants";
 @import "partials/commons";
+@import "views/wizard-view";
 @import "views/search-view";
 @import "views/search-result-view";
 
@@ -33,19 +34,4 @@ header.navbar{
 span.navbar-brand {
   float: none!important;
   text-align: center;
-}
-
-
-
-/* ========================== form wizard ======================*/
-form#wizard{
-  width:100%;
-  height:100%;
-  position: absolute;
-  top: 155px;
-  left: 10px;
-  z-index: 2;
-  .form-control {
-    width: 80%;
-  }
 }
