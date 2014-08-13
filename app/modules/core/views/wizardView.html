@@ -1,5 +1,5 @@
 <div id="wizard-view">
-    <form ng-app="wizardApp" id="wizard" action="#/mainPage" name="wizardForm" novalidate>
+    <form id="wizard" action="#/searchPage" name="wizardForm" novalidate>
         <fieldset ng-controller="wizardCtrl">
             <label for="wiz-carModel">Car model:</label>
             <select id="wiz-carModel" class="form-control" name="model" required ng-model="selectedModel" ng-options="item.id as item.model for item in carModels" >

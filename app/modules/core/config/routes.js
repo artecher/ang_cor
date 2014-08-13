@@ -8,8 +8,8 @@ angular.module('iFuelApp',['ngRoute'])
             .when('/wizardPage',{
                 templateUrl:'modules/core/views/wizardView.html'
             })
-            .when('/mainPage',{
-                templateUrl:'modules/core/views/mainPageView.html'
+            .when('/searchPage',{
+                templateUrl:'modules/core/views/searchPageView.html'
             })
             .when('/resultPage',{
                 templateUrl:'modules/core/views/resultView.html'

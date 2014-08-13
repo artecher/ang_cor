@@ -73,11 +73,6 @@ div#search-page form#searchForm input#search-btn {
   float: right;
 }
 
-/* line 24, ../sass/views/_search-view.scss */
-label {
-  color: #606362;
-}
-
 /* line 2, ../sass/views/_search-result-view.scss */
 div#result-view section.station-result-entry {
   color: #606362;
@@ -160,4 +155,9 @@ header.navbar {
 span.navbar-brand {
   float: none !important;
   text-align: center;
+}
+
+/* line 39, ../sass/styles.scss */
+label {
+  color: #606362;
 }

@@ -1,5 +1,5 @@
-'use strict';
-
-angular.module('core').controller('HomeController', ['$scope', function ($scope) {
-
-}]);
+//'use strict';
+//
+//angular.module('core').controller('HomeController', ['$scope', function ($scope) {
+//
+//}]);
