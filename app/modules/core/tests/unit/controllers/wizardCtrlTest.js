@@ -3,16 +3,16 @@
  */
 describe('Test wizardCtrl controllers', function() {
 
-    var index ;
-
-    beforeEach(function() {
-         index=1;
-    });
-
-    it('test index increment',function() {
-        index++;
-        expect(index).toEqual(2);
-    });
+//    var index ;
+//
+//    beforeEach(function() {
+//         index=1;
+//    });
+//
+//    it('test index increment',function() {
+//        index++;
+//        expect(index).toEqual(2);
+//    });
 
 
 });

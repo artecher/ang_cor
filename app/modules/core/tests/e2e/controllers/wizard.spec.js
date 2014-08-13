@@ -3,17 +3,20 @@
  */
 describe('e2e tests for wizard page', function () {
 
+
     beforeEach(function () {
         //select SUV and save
-
+        browser.get('#/wizardPage');
     });
 
-    it('test whether the data is saved', function () {
-        browser.get('#/wizardPage');
-//        element(by.model('selectedModel')).sendKeys('SUV');
-//        element(by.id('wiz-next')).click();
-//        expect(window.localStorage.getItem('iFuelPrefCons')).toEqual(12);
-//        expect(window.localStorage.getItem('iFuelPrefTankVol')).toEqual(60);
+    it('test whether the watch function is working', function () {
+        element(by.model('selectedModel')).sendKeys('SUV');
+        //submit button should be enabled
+        expect(element(by.id('wiz-next')).getAttribute('disabled')).toBeFalsy();
+        expect(element(by.id('wiz-next')).isEnabled()).toBeTruthy();
+
+
+//        expect(element(by.model('consumption')).getAttribute('value')).toBe('12');
 
     });
 
