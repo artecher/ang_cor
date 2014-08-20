@@ -1,6 +1,7 @@
 /**
  * Created by ethan on 2014/8/12.
  */
+'use strict';
 angular.module('iFuelApp')
     .controller('SearchCtrl',function($scope) {
         console.debug("SearchCtrl");

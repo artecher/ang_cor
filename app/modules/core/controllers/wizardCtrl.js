@@ -1,7 +1,7 @@
 /**
  * Created by ethan on 2014/8/4.
  */
-
+'use strict';
 angular.module('iFuelApp')
     .controller('wizardCtrl', function ($http, $scope) {
         console.debug('wizardCtrl');
@@ -22,8 +22,9 @@ angular.module('iFuelApp')
             if(angular.isDefined($scope.selectedModel) && angular.isDefined($scope.carModels)){
                 $scope.consumption = $scope.carModels[$scope.selectedModel].fuelConsumption;
                 $scope.tankVol = $scope.carModels[$scope.selectedModel].tankVolumn;
-            };
+            }
         });
+
 
         $scope.next = function(){
             //store the choice and got to next

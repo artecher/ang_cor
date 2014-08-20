@@ -16,7 +16,9 @@ describe('e2e tests for wizard page', function () {
         expect(element(by.id('wiz-next')).isEnabled()).toBeTruthy();
 
 
-//        expect(element(by.model('consumption')).getAttribute('value')).toBe('12');
+        //inputs should be filled by watch function
+        expect(element(by.model('consumption')).getAttribute('value')).toBe('12');
+        expect(element(by.model('tankVol')).getAttribute('value')).toBe('60');
 
     });
 
